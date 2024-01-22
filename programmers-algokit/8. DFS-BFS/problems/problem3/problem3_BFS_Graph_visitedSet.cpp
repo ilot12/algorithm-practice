@@ -57,8 +57,7 @@ public:
         while (!bfsSearchQueue.empty()) {
             pair<pair<int, int>, int> point = bfsSearchQueue.front();
             bfsSearchQueue.pop_front();
-            visited.insert(point.first);
-
+			
             if (point.first == make_pair(width - 1, height - 1)) {
                 return point.second;
             }
