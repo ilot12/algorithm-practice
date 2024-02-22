@@ -1,0 +1,26 @@
+partialMax[{0, 1}]은 0 ~ 1을 이용한 최대임.
+그러면 연산기호 0번에 대해서 
+plus면 partialMax[{0, 1}] = partialMax[{0, 0}] + partialMax[{1, 1}]
+minus면 partialMax[{0, 1}] = partialMax[{0, 0}] - partialMin[{1, 1}]
+
+partialMin[{0, 1}]는 연산기호 0번에 대해서
+plus면 partialMin[{0, 1}] = partialMin[{0, 0}] + partialMin[{1, 1}]
+minus면 partialMin[{0, 1}] = partialMin[{0, 0}] - partialMax[{1, 1}]임
+
+첫 번째 연산을 했으니 두 번째 연산인 연산기호 1번에 대해 수행하자.
+이를 하면 두칸 차이나는 partialMax[{i, i+2}]에 대해 완성됨.
+
+연산이 +면 뒤에 걸 Max에서 꺼내고 연산이 -면 뒤에 걸 Min에서 꺼냄.
+그리고 +를하고 -를하고가 달라짐.
+따라서 PartialMax와 PartialMin으로 만들게 아니라
+PartialMinMax의 vector<vector<int>>로 만들어서
+isOperationPlus에서 plus면 1 minus면 0이 들어있으므로 
+PartialMinMax의[1]의 벡터에 partialMax를, PartialMinMax의[0]의 벡터에 partialMin을 담자.
+
+
+숫자가 0 ~ 10번까지 11개 있고, 연산이 0번부터 9번까지 10개가 있다고 하자.
+나는 5번째 연산인 4번 연산을 보려고 함.
+
+4번 연산이 +임.
+그러면 4번 연산을 포함하는 것들 즉
+0번숫자 ~ 5번숫자를 계산할 수 있음.
