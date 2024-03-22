@@ -9,9 +9,9 @@
 
 <br>
 
-### <a href= "https://school.programmers.co.kr/">01.hash</a>
-- 사이트에서 제공하는 코드 작성툴이 있고 코딩테스트가 이를 기반으로 시행되기에 연습하기 좋은 사이트입니다.
-<br>카카오 기출문제등을 포함해 문제집과 같은 형태로 정리가 잘 되어 있습니다.
+### [01.hash](https://github.com/ilot12/algorithm-practice/tree/main/programmers-algokit/01.%20hash)
+- 특정 알고리즘을 통해 매핑하는 함수를 의미한다.
+<br>
 
 	#### 
 
